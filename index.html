@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopping</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #c8ff00;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bg-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.03);
+        }
+        .circle-1 {
+            width: 500px;
+            height: 500px;
+            top: -150px;
+            left: -100px;
+        }
+        .circle-2 {
+            width: 350px;
+            height: 350px;
+            bottom: -100px;
+            right: -80px;
+        }
+
+        .container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            z-index: 1;
+        }
+
+        .logo-icon {
+            width: 220px;
+            height: 220px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-box {
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            border-radius: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-symbol {
+            width: 65%;
+            height: 65%;
+            position: relative;
+        }
+
+        .logo-symbol span {
+            position: absolute;
+            background-color: #c8ff00;
+            border-radius: 8px;
+        }
+        .h-left {
+            left: 15%;
+            top: 10%;
+            width: 18%;
+            height: 80%;
+        }
+        .h-middle {
+            left: 41%;
+            top: 40%;
+            width: 18%;
+            height: 20%;
+        }
+        .h-right {
+            right: 15%;
+            top: 10%;
+            width: 18%;
+            height: 80%;
+        }
+        .h-bounce {
+            left: 25%;
+            top: 20%;
+            width: 50%;
+            height: 12%;
+            border-radius: 100px;
+            background: linear-gradient(90deg, #c8ff00 0%, #c8ff00 100%);
+            clip-path: polygon(0% 100%, 10% 40%, 25% 0%, 40% 40%, 50% 10%, 60% 40%, 75% 0%, 90% 40%, 100% 100%);
+        }
+
+        .coming-soon {
+            font-size: 24px;
+            color: #556b00;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-weight: 500;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #000000;
+            font-weight: 500;
+            max-width: 480px;
+            line-height: 1.6;
+            opacity: 0.85;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 32px;
+            border: 2px solid #556b00;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #000000;
+            font-size: 28px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 8px;
+        }
+
+        .social-button:hover {
+            background-color: rgba(0,0,0,0.05);
+        }
+
+        .x-icon {
+            width: 32px;
+            height: 32px;
+        }
+
+        .footer-text {
+            position: absolute;
+            bottom: 40px;
+            font-size: 24px;
+            color: #556b00;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .logo-icon { width: 170px; height: 170px; }
+            .tagline { font-size: 17px; padding: 0 20px; }
+            .social-button { font-size: 22px; padding: 12px 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-circle circle-1"></div>
+    <div class="bg-circle circle-2"></div>
+
+    <div class="container">
+        <div class="logo-icon">
+            <div class="logo-box">
+                <div class="logo-symbol">
+                    <span class="h-left"></span>
+                    <span class="h-middle"></span>
+                    <span class="h-right"></span>
+                    <span class="h-bounce"></span>
+                </div>
+            </div>
+        </div>
+
+        <p class="coming-soon">COMING SOON</p>
+        <p class="tagline">Moving forward, leaping higher on Robinhood Chain.</p>
+
+        <!-- Tautan X SUDAH DIAKTIFKAN -->
+        <a href="https://x.com/hoppingtech" target="_blank" rel="noopener noreferrer" class="social-button">
+            <svg class="x-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @hoppingtech
+        </a>
+    </div>
+
+    <p class="footer-text">hoppingtech.xyz</p>
+</body>
+</html>
